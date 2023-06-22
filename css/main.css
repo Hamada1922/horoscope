@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: linear-gradient(90deg, rgba(9, 47, 110, 1) 0%, rgba(34, 139, 217, 1) 100%);
+  --font: #ffffff;
+  --bg: #092e6d;
+  --s-bg: #228bd9;
+  --t-bg: #111;
+  --space: #1d2951;
+  --trans: 0.3s;
+}
+
+body {
+  background-image: url("../imgs/horoscope_bg.png");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-color: var(--t-bg);
+  color: var(--font);
+  font-family: 'Archivo Narrow', sans-serif;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  line-height: 1.6;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.overlay .screen {
+  background-color: var(--space);
+  padding: 20px;
+  font-size: 17px;
+  max-width: 90%;
+}
+.overlay .screen span {
+  color: var(--s-bg);
+}
+@media (max-width: 767px) {
+  .overlay .screen {
+    text-align: center;
+  }
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+header .container {
+  padding: 10px 0;
+}
+header .container .logo {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  height: 70px;
+}
+header .container .logo img {
+  max-height: 100%;
+}
+header .container .logo span {
+  font-size: 20px;
+  font-weight: bold;
+}
+@media (max-width: 767px) {
+  header .container .logo {
+    height: 40px;
+  }
+  header .container .logo span {
+    font-size: 14px;
+  }
+}
+
+main {
+  padding: 100px 0;
+  min-height: calc(100vh - 170px);
+}
+main .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+main .container .text h2 {
+  font-size: 40px;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+main .container .text p {
+  font-size: 17px;
+  margin-top: 10px;
+}
+@media (max-width: 767px) {
+  main .container .text h2 {
+    font-size: 30px;
+  }
+  main .container .text p {
+    font-size: 14px;
+  }
+}
+main .container .form {
+  min-width: 40%;
+}
+main .container .form h3 {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+main .container .form form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+main .container .form form input {
+  background: none;
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-bottom: 1px solid var(--bg);
+  caret-color: var(--s-bg);
+  color: var(--font);
+  text-transform: capitalize;
+}
+main .container .form form input::placeholder {
+  transition: var(--trans);
+}
+main .container .form form input:focus::placeholder {
+  opacity: 0;
+}
+main .container .form form input:focus {
+  border-color: var(--s-bg);
+}
+main .container .form form button {
+  background: var(--bg);
+  color: var(--font);
+  border: none;
+  outline: none;
+  padding: 7px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: var(--trans);
+}
+main .container .form form button:hover {
+  background-color: var(--s-bg);
+}
+main .container .form form .date {
+  text-transform: none;
+  color: #777;
+}
+main .container .form form .date:focus {
+  color: var(--font);
+}
+main .container .form form .date::after {
+  color: red;
+}
+@media (max-width: 767px) {
+  main .container .form {
+    width: 90%;
+  }
+  main .container .form h3 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 767px) {
+  main .container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+footer {
+  padding: 20px 0;
+  box-shadow: 0px -8px 10px -8px rgba(255, 255, 255, 0.3);
+}
+footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .container .social {
+  display: flex;
+  gap: 10px;
+}
+footer .container .social .icons {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 17px;
+}
+footer .container .social .icons a i {
+  transition: var(--trans);
+  color: var(--s-bg);
+}
+footer .container .social .icons a i:hover {
+  transform: scale(1.1);
+  color: var(--bg);
+}
+footer .container .copyright span {
+  color: var(--s-bg);
+  font-weight: bold;
+}
+@media (max-width: 767px) {
+  footer .container {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+  footer .container .social {
+    flex-direction: column;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

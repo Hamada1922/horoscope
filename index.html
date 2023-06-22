@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" content="scss, css, frontend, design, website" />
+  <meta name="description" content="design website with css extension language scss" />
+  <title>Horoscope</title>
+  <link rel="icon" href="imgs/horoscope_logo.png" />
+  <link rel="stylesheet" href="css/all.min.css" />
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400;1,700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div class="overlay hidden">
+    <div class="screen">
+      <p>
+        welcom <span class="name">hamada</span>,<br>
+        your horoscope is <span class="horoscope">balance</span>, you will receive a daily message about your horoscope
+        future via this email <span class="email">ShiniGami@gmail.com</span>
+      </p>
+    </div>
+  </div>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="./imgs/horoscope-logo.png" alt="logo">
+        <span>Horoscope</span>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <div class="text">
+        <h2>know your future</h2>
+        <p>in the easiest way, know everything related to the future of your Horoscope like luck and relationships.</p>
+        <p>just enter your data in the next form and receive your future email every day, what you wait?</p>
+      </div>
+      <div class="form">
+        <h3>register your data</h3>
+        <form action="">
+          <input id="name" type="text" required placeholder="your name">
+          <input id="email" type="email" required placeholder="your email">
+          <input id="date" class="date" required type="date" placeholder="your birthday">
+          <button id="btn" type="submit">let's start</button>
+        </form>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="container">
+      <div class="social">
+        <span>follow us</span>
+        <div class="icons">
+          <a href=""><i class="fa-brands fa-facebook"></i></a>
+          <a href=""><i class="fa-brands fa-youtube"></i></a>
+          <a href=""><i class="fa-brands fa-twitter"></i></a>
+        </div>
+      </div>
+      <p class="copyright">all copyrights reserved by <span>ShiniGami</span> &copy; 2023</p>
+    </div>
+  </footer>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
